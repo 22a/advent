@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "day": "node --no-warnings --experimental-strip-types runner.ts"
+    "day": "node --no-warnings --experimental-strip-types utils/runner.ts",
+    "make-day": "node --no-warnings --experimental-strip-types utils/make-day.ts"
   },
   "keywords": [],
   "author": "",
