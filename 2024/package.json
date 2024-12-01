@@ -1,0 +1,17 @@
+{
+  "name": "advent2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "day": "node --no-warnings --experimental-strip-types runner.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "prettier": "3.4.1"
+  }
+}
