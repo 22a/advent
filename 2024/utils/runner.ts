@@ -4,7 +4,7 @@ if (!day) {
   process.exit(1);
 }
 
-import(`./${day}/index.ts`).catch((error) => {
+import(`../${day}/index.ts`).catch((error) => {
   console.error('Error loading module:', error);
   process.exit(1);
 });
