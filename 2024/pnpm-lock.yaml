@@ -8,15 +8,34 @@ importers:
 
   .:
     dependencies:
+      ts-graphviz:
+        specifier: ^2.1.5
+        version: 2.1.5
+    devDependencies:
       '@types/node':
         specifier: ^22.10.1
         version: 22.10.1
-    devDependencies:
       prettier:
         specifier: 3.4.1
         version: 3.4.1
 
 packages:
+
+  '@ts-graphviz/adapter@2.0.6':
+    resolution: {integrity: sha512-kJ10lIMSWMJkLkkCG5gt927SnGZcBuG0s0HHswGzcHTgvtUe7yk5/3zTEr0bafzsodsOq5Gi6FhQeV775nC35Q==}
+    engines: {node: '>=18'}
+
+  '@ts-graphviz/ast@2.0.6':
+    resolution: {integrity: sha512-JbOnw6+Pm+C9jRQlNV+qJG0/VTan4oCeZ0sClm++SjaaMBJ0q86O13i6wbcWKY2x8kKt9GP2hVCgM/p/BXtXWQ==}
+    engines: {node: '>=18'}
+
+  '@ts-graphviz/common@2.1.5':
+    resolution: {integrity: sha512-S6/9+T6x8j6cr/gNhp+U2olwo1n0jKj/682QVqsh7yXWV6ednHYqxFw0ZsY3LyzT0N8jaZ6jQY9YD99le3cmvg==}
+    engines: {node: '>=18'}
+
+  '@ts-graphviz/core@2.0.6':
+    resolution: {integrity: sha512-0hvrluFirC0ph3Dn2o1B0O1fI2n7Hre1HlScfmRcO6DDDq/05Vizg5UMI0LfvkJulLuz80RPjUHluh+QfBUBKw==}
+    engines: {node: '>=18'}
 
   '@types/node@22.10.1':
     resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
@@ -26,15 +45,41 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  ts-graphviz@2.1.5:
+    resolution: {integrity: sha512-IigMCo40QZvyyURRdYFh0DV6DGDt7OqkPM/TBGXSJKfNKnYmOfRg0tzSlnJS1TQCWFSTEtpBQsqmAZcziXJrWg==}
+    engines: {node: '>=18'}
+
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
 snapshots:
+
+  '@ts-graphviz/adapter@2.0.6':
+    dependencies:
+      '@ts-graphviz/common': 2.1.5
+
+  '@ts-graphviz/ast@2.0.6':
+    dependencies:
+      '@ts-graphviz/common': 2.1.5
+
+  '@ts-graphviz/common@2.1.5': {}
+
+  '@ts-graphviz/core@2.0.6':
+    dependencies:
+      '@ts-graphviz/ast': 2.0.6
+      '@ts-graphviz/common': 2.1.5
 
   '@types/node@22.10.1':
     dependencies:
       undici-types: 6.20.0
 
   prettier@3.4.1: {}
+
+  ts-graphviz@2.1.5:
+    dependencies:
+      '@ts-graphviz/adapter': 2.0.6
+      '@ts-graphviz/ast': 2.0.6
+      '@ts-graphviz/common': 2.1.5
+      '@ts-graphviz/core': 2.0.6
 
   undici-types@6.20.0: {}
