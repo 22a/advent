@@ -1,0 +1,21 @@
+{
+  "name": "advent2025",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "day": "node utils/runner.ts",
+    "make-day": "node utils/make-day.ts"
+  },
+  "engines": {
+    "node": "25.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "prettier": "3.7.3"
+  }
+}
