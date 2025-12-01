@@ -6,18 +6,21 @@ let dial = 50;
 let finishedOnZero = 0;
 let touchedZero = 0;
 lines.forEach((line) => {
+  const startedAtZero = dial === 0;
   const dir = line[0] === 'R' ? 1 : -1;
   const num = Number(line.slice(1));
-  for (let i = 0; i < num; i++) {
-    dial += dir;
-    if (dial === 100) {
-      dial = 0;
-    } else if (dial === -1) {
-      dial = 99;
-    }
-    if (dial === 0) {
+  touchedZero += Math.floor(num / 100);
+  dial += dir * (num % 100);
+  if (dial >= 100) {
+    dial %= 100;
+    touchedZero++;
+  } else if (dial < 0) {
+    dial += 100;
+    if (!startedAtZero) {
       touchedZero++;
     }
+  } else if (dial === 0) {
+    touchedZero++;
   }
   if (dial === 0) {
     finishedOnZero++;
