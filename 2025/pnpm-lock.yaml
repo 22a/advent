@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@datastructures-js/priority-queue':
+        specifier: ^6.3.5
+        version: 6.3.5
+      javascript-lp-solver:
+        specifier: ^0.4.24
+        version: 0.4.24
     devDependencies:
       '@types/node':
         specifier: ^24.10.1
@@ -17,8 +24,17 @@ importers:
 
 packages:
 
+  '@datastructures-js/heap@4.3.7':
+    resolution: {integrity: sha512-Dx4un7Uj0dVxkfoq4RkpzsY2OrvNJgQYZ3n3UlGdl88RxxdHd7oTi21/l3zoxUUe0sXFuNUrfmWqlHzqnoN6Ug==}
+
+  '@datastructures-js/priority-queue@6.3.5':
+    resolution: {integrity: sha512-NmdmvLnkUyG67W6Iy8tP+865ILq5VDyZh90c8lHMOkYYydUNzOV0QNPCRAuj4AoHSm/V2DeuYvDKnvALaCwLvA==}
+
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
+
+  javascript-lp-solver@0.4.24:
+    resolution: {integrity: sha512-5edoDKnMrt/u3M6GnZKDDIPxOyFOg+WrwDv8mjNiMC2DePhy2H9/FFQgf4ggywaXT1utvkxusJcjQUER72cZmA==}
 
   prettier@3.7.3:
     resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
@@ -30,9 +46,17 @@ packages:
 
 snapshots:
 
+  '@datastructures-js/heap@4.3.7': {}
+
+  '@datastructures-js/priority-queue@6.3.5':
+    dependencies:
+      '@datastructures-js/heap': 4.3.7
+
   '@types/node@24.10.1':
     dependencies:
       undici-types: 7.16.0
+
+  javascript-lp-solver@0.4.24: {}
 
   prettier@3.7.3: {}
 

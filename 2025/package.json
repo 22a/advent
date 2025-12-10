@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "day": "node utils/runner.ts",
+    "day": "node --max-old-space-size=8000 utils/runner.ts",
     "make-day": "node utils/make-day.ts"
   },
   "engines": {
@@ -17,5 +17,9 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "prettier": "3.7.3"
+  },
+  "dependencies": {
+    "@datastructures-js/priority-queue": "^6.3.5",
+    "javascript-lp-solver": "^0.4.24"
   }
 }
